@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Lynn Wallenstein : Founding Partner
+  Site: http://www.poweredbygeek.com
+  Twitter: @LynnWallenstein
+  Location: Baltimore, MD USA
+
+/* THANKS */
+  Names (& URL): http://html5boilerplate.com/, http://twitter.github.com/bootstrap/
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, HTML5 Boilerplate, Twitter Bootstrap
+  Software:
