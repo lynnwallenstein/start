@@ -22,7 +22,7 @@
 /* Hide for both screenreaders and browsers: h5bp.com/m */
 
 @mixin hidden {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
 
