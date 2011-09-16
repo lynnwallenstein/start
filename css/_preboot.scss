@@ -3,7 +3,6 @@
    ========================================================================== */
 
 /* For image replacement */
-
 @mixin ir {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -18,16 +17,13 @@
   }
 }
 
-
 /* Hide for both screenreaders and browsers: h5bp.com/m */
-
 @mixin hidden {
   display: none !important;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/n  & h5bp.com/o */
-
 @mixin visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
