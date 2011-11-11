@@ -1,8 +1,8 @@
-/* ==|== non-semantic helper classes ========================================
+// ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
-   ========================================================================== */
+   ==========================================================================
 
-/* For image replacement */
+// For image replacement
 @mixin ir {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -12,18 +12,19 @@
   overflow: hidden;
   text-align: left;
   text-indent: -999em;
+  *line-height: 0;
   & br {
     display: none;
   }
 }
 
-/* Hide for both screenreaders and browsers: h5bp.com/m */
+// Hide for both screenreaders and browsers: h5bp.com/m
 @mixin hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/n  & h5bp.com/o */
+// Hide only visually, but have it available for screenreaders: h5bp.com/n  & h5bp.com/o */
 @mixin visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -33,7 +34,7 @@
   padding: 0;
   position: absolute;
   width: 1px;
-  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+  // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
   &.focusable {
     &:active, &:focus {
        clip: auto;
@@ -46,12 +47,12 @@
   }
 }
 
-/* Hide visually and from screenreaders, but maintain layout */
+// Hide visually and from screenreaders, but maintain layout
 @mixin invisible {
   visibility: hidden;
 }
 
-/* Contain floats: h5bp.com/q */
+// Contain floats: h5bp.com/q
 @mixin clearfix {
   *zoom: 1;
   &:after, &:before {

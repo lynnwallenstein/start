@@ -1,0 +1,206 @@
+// Marcotte Grid System v0.3
+// Learn More: https://www.marcotte.gs
+// Licensed under GPL and MIT.
+
+
+$grid-columns: 24; // Default is 24 = More Columns, More Flexibility.
+
+$gutters: .01; //Default .01= 1% a percent (on 960px this is about 20px)
+
+// Resonsive Design Sizes
+$default-layout-width: 960px; // Default "Desktop" Size ... px or %
+$tablet-layout-width: 764px; // Max width for Tablet
+$mobile-layout-width: 320px; // Mobile Layout
+$mobile-wide-layout-width: 480px; // Wide Mobile (Horizontal)
+
+
+
+// Edit the Following at your own risk.
+//*********************************************************************************
+
+// Unit Equation
+$unit_type : unit($default-layout-width);
+$unit : ($default-layout-width / $grid-columns) / $default-layout-width ;
+
+
+@mixin grid_container  {
+  margin: auto;
+  width: $default-layout-width; // Default Layout: 960px
+  //  Tablet Layout: 768px.
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+      width: $tablet-layout-width;
+  }
+
+  //  Mobile Layout: 320px.
+  @media only screen and (max-width: 767px) {
+      width: $mobile-layout-width;
+  }
+
+  //  Wide Mobile Layout: 480px.
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+      width: $mobile-wide-layout-width;
+  }
+}
+
+
+// grid(size,push,pull,firstcol,lastcol,padding)
+
+// $size = how many units
+// $push = how many negative units to the left
+// $pull = how many negative units to the right
+// $firstcol = is this the first column in the grid.. no gutter on left
+// $lastcol = is this the last column in the grid.. no gutter on right
+// $padding = padding that you want added. Standard CSS padding rules apply
+
+@mixin grid( $size: 1, $push: 0, $pull: 0, $firstcol: false, $lastcol: false, $padding: 0 0 0 0 ) {
+
+
+
+  /* Figure out what padding configuration was used */
+
+  $padding-list-length: length($padding);
+  $top-padding-position: 1;
+  $right-padding-position: 2;
+  $bottom-padding-position: 3;
+  $left-padding-position: 4;
+
+  @if ($padding-list-length == 3) {
+    $left-padding-position: 2;
+  } @else if ($padding-list-length == 2) {
+    $bottom-padding-position: 1;
+    $left-padding-position: 2;
+  } @else if ($padding-list-length == 1) {
+    $right-padding-position: 1;
+    $bottom-padding-position: 1;
+    $left-padding-position: 1;
+  }
+
+  /* Figure out what padding values are */
+
+  $padding-top: nth($padding, $top-padding-position);
+  $padding-right: nth($padding, $right-padding-position);
+  $padding-bottom: nth($padding, $bottom-padding-position);
+  $padding-left: nth($padding, $left-padding-position);
+
+
+
+ /* Figure out what the unit configuration was used and how much needs to be subtraced from the width*/
+
+
+  @if (unitless($padding-top)) {
+    $padding-top: 0; // No Units
+  } @else {
+    $padding-top-unit: unit($padding-top);
+    @if ($padding-top-unit == "px") {
+      $padding-top:$padding-top; // not messing with top and bottom padding ... yet.
+    } @else if ($padding-top-unit == "%") {
+      $padding-top: $padding-top; // already a %
+    }
+  }
+
+  @if (unitless($padding-right)) {
+    $padding-right: 0; // No Units - Do Nothing.
+  } @else {
+    $padding-right-unit: unit($padding-right);
+    @if ($padding-right-unit == "px") {
+      $padding-right:  percentage($padding-right / $default-layout-width);
+    } @else if ($padding-right-unit == "%") {
+      $padding-right: $padding-right; // already a %
+    }
+  }
+
+  @if (unitless($padding-bottom)) {
+    $padding-bottom: 0; // No Units
+  } @else {
+    $padding-bottom-unit: unit($padding-bottom);
+    @if ($padding-bottom-unit == "px") {
+      $padding-bottom:$padding-bottom; // not messing with top and bottom padding ... yet.
+    } @else if ($padding-bottom-unit == "%") {
+      $padding-bottom: $padding-bottom; // already a %
+    }
+  }
+
+  @if (unitless($padding-left)) {
+    $padding-left: 0; // No Units
+  } @else {
+    $padding-left-unit: unit($padding-left);
+    @if ($padding-left-unit == "px") {
+      $padding-left:  percentage($padding-left / $default-layout-width);
+    } @else if ($padding-left-unit == "%") {
+      $padding-left: $padding-left; // already a %
+    }
+  }
+
+
+  $horizontal-padding-to-subtract: ($padding-left + $padding-right);
+  $vertical-padding-to-subtract: ($padding-top + $padding-bottom);
+
+
+  @if $size == $grid-columns { // Full Size by filling up every column. No gutters. Just go.
+
+    width: percentage( $size * $unit ) - $horizontal-padding-to-subtract;
+    padding-top: $padding-top;
+    padding-right: $padding-right;
+    padding-bottom: $padding-bottom;
+    padding-left: $padding-left;
+
+
+  } @else {
+
+    @if (($firstcol == false) and ($lastcol == false)) {
+      // Isn't a First or Last Column. Gutter will be added on both left and right side
+      width: percentage( $size * $unit ) - percentage( $gutters * 2) - $horizontal-padding-to-subtract;
+      margin-right: percentage( $gutters );
+      margin-left: percentage( $gutters );
+      padding-top: $padding-top;
+      padding-right: $padding-right;
+      padding-bottom: $padding-bottom;
+      padding-left: $padding-left;
+
+    } @else if ($firstcol != false) and ($lastcol != false) {
+      // Both a first and last column. No gutters
+      width: percentage( $size * $unit );
+      padding-top: $padding-top;
+      padding-right: $padding-right;
+      padding-bottom: $padding-bottom;
+      padding-left: $padding-left;
+
+    } @else if ($firstcol != false) {
+      // First column, not gutter on left
+      width: percentage( $size * $unit ) - percentage( $gutters ) - $horizontal-padding-to-subtract;
+      margin-left: 0;
+      margin-right: percentage($gutters);
+      padding-top: $padding-top;
+      padding-right: $padding-right;
+      padding-bottom: $padding-bottom;
+      padding-left: $padding-left;
+
+    } @else {
+      // Last column, no gutter on right
+      width: percentage( $size * $unit ) - percentage( $gutters ) - $horizontal-padding-to-subtract;
+      margin-left: percentage($gutters);
+      margin-right: 0;
+      padding-top: $padding-top;
+      padding-right: $padding-right;
+      padding-bottom: $padding-bottom;
+      padding-left: $padding-left;
+    }
+
+    @if $push != 0 {
+      left: -percentage( $push * $unit );
+      padding-top: $padding-top;
+      padding-right: $padding-right;
+      padding-bottom: $padding-bottom;
+      padding-left: $padding-left;
+    }
+
+    @if $pull != 0 {
+      right: -percentage( $pull * $unit );
+      padding-top: $padding-top;
+      padding-right: $padding-right;
+      padding-bottom: $padding-bottom;
+      padding-left: $padding-left;
+    }
+
+  }
+}
