@@ -1,1 +1,9 @@
 sass --watch css/sass:css -r ./css/sass/bourbon/lib/bourbon.rb
+
+
+Hacks
+--------------------------
+
+/* IE7 hack to mimic inline-block */
+*display: inline;
+*zoom: 1;

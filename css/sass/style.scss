@@ -9,12 +9,26 @@
 //
 
 @import "bourbon/bourbon";
-@import "marcotte-grid";
+@import "marcotte_grid";
 @import "preboot";
 
 // @import "normalize"; - Minified CDN <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.min.css /> */
 
 @import "boilerplate";
+
+// Base
+
+html {
+  body {
+    background: #fff;
+  } // body
+} // htmk
+
+// Layout .l-
+
+// Modules  - NO #ID
+
+// State
 
 // ==|== media queries ====================================================
 //   PLACEHOLDER Media Queries for Responsive Design.
