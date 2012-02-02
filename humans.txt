@@ -1,11 +1,10 @@
 /* the humans responsible & colophon */
 /* humanstxt.org */
 
-
 /* TEAM */
   Lynn Wallenstein : Founding Partner
-  Powered By Geek
-  http://www.poweredbygeek.com
+  ApicalLabs
+  http://www.apicallabs.com
   Personal Site: http://www.lynn.io
   Twitter: @LynnWallenstein
   Location: Baltimore, MD USA
