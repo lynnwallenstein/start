@@ -1,0 +1,10 @@
+// http://www.w3.org/TR/css3-background/#the-background-clip
+// Values can be border-box, padding-box or content-box.
+
+@mixin background-clip ($value) {
+  -webkit-background-clip: $value;
+     -moz-background-clip: $value;
+      -ms-background-clip: $value;
+       -o-background-clip: $value;
+          background-clip: $value;
+}

@@ -1,53 +1,41 @@
-//
-// HTML5 ✰ Boilerplate (SCSS Edition)
-//
-// What follows is the result of much research on cross-browser styling.
-// Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-// Kroc Camen, and the H5BP dev community and team.
-//
-// Detailed information about this CSS: h5bp.com/css
-//
+// *****************************************************************************
+//  STYLES
+//  By: Lynn Wallenstein
+// *****************************************************************************
 
-@import "bourbon/bourbon";
-@import "marcotte-grid";
-@import "preboot";
-@import "normalize"; 
-@import "boilerplate";
+// ------------------------------------------------------------------ 
+//  Includes
+// ------------------------------------------------------------------ 
 
-// ==|== primary styles =====================================================
-//   Author:
-// =======================================================================
+@import "globals/mixins/mixins";
+@import "globals/variables";
+@import "plugins/marcotte-grid";
+@import "plugins/normalize"; 
+@import "plugins/boilerplate";
 
+// Sections of Page
+@import "sections/header"; 
+@import "sections/footer"; 
 
-// Base
+// ------------------------------------------------------------------ 
+//  Primary Styles
+//  - Keep this limited. Styles should live in proper section. modules files.
+//  - Layout classes should begin with .layout-
+//  - Modules/Plugins should never be IDs
+//  - States should follow the "is-visible" convention
+// ------------------------------------------------------------------ 
 
 html {
   body {
-    background: #fff;
-    header#page-header {
-    } //header#page-header
+    background: $siteBackgroundColor;
     div#main {
     } // div#main
-    footer#page-footer {
-    } // footer#page-footer
   } // body
 } // html
 
-// Layout .l-
+// ------------------------------------------------------------------ 
+//  Primary Styles
+// ------------------------------------------------------------------ 
 
-// Modules  - NO #ID
-
-// State
-
-
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@import "print";
+@import "components/responsive";
+@import "globals/print";

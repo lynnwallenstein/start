@@ -1,0 +1,10 @@
+// http://www.w3.org/TR/css3-background/#background-origin
+// Values can be padding-box, border-box or content-box.
+
+@mixin background-origin ($value) {
+  -webkit-background-origin: $value;
+     -moz-background-origin: $value;
+      -ms-background-origin: $value;
+       -o-background-origin: $value;
+          background-origin: $value;
+}

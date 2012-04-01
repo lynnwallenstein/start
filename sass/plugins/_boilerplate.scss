@@ -6,6 +6,11 @@
 //  Base
 // =============================================================================
 
+* {
+  @include box-sizing(border-box); // http://paulirish.com/2012/box-sizing-border-box-ftw/ ... You will thank me later.
+  background-repeat: no-repeat;
+}
+
 //
 // 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
 // 2. Force vertical scrollbar in non-IE
@@ -31,6 +36,19 @@ body, button, input, select, textarea {
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
+//=============================================================================
+//   Links
+//  ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+
+// =============================================================================
+//   Typography
+//  ========================================================================== */
+
+
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
 ins { background: #ff9; color: #000; text-decoration: none; }
@@ -38,6 +56,8 @@ ins { background: #ff9; color: #000; text-decoration: none; }
 mark { font-style: italic; font-weight: bold; }
 
 small { font-size: 85%; }
+
+ul,ol { padding: 0 0 0 40px;}
 
 nav ul, nav ol {  margin: 0; padding: 0; }
 
@@ -60,3 +80,9 @@ table {
     vertical-align: top;
   }
 }
+
+// =============================================================================
+//  Chrome Frame Prompt
+//  ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }

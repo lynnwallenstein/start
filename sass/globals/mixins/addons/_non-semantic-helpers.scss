@@ -1,21 +1,10 @@
-// ==|== non-semantic helper classes ========================================
-//   Please define your styles before this section.
-//   ========================================================================
-
 // For image replacement
-@mixin ir {
+@mixin ir { 
   background-color: transparent;
-  background-repeat: no-repeat;
-  border: 0;
-  direction: ltr;
-  display: block;
-  overflow: hidden;
-  text-align: left;
-  text-indent: -999em;
-  *line-height: 0;
-  & br {
-    display: none;
-  }
+  border:0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
 }
 
 // Hide for both screenreaders and browsers: h5bp.com/m
@@ -52,12 +41,16 @@
   visibility: hidden;
 }
 
-// Contain floats: h5bp.com/q
-@mixin clearfix {
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+
+@mixin clearfix() {
   *zoom: 1;
-  &:after, &:before {
-     content: "";
-     display: table;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
   }
   &:after {
     clear: both;

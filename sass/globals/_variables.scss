@@ -1,0 +1,82 @@
+// *****************************************************************************
+// VARIABLES
+// *****************************************************************************
+
+// ------------------------------------------------------------------ 
+//  PATHS
+// ------------------------------------------------------------------ 
+
+$root-assets: "/";
+$font-path: $root-assets+"/fonts";
+$image-path: $root-assets+"/img";
+
+// ------------------------------------------------------------------ 
+//  COLORS
+// ------------------------------------------------------------------ 
+
+$black: #000;
+$white: #fff;
+
+// The Grays
+// -------------------------------------------------------------------
+
+$gray: #a29f99;
+$grayLight: tint($gray, 20%);
+$grayLighter: tint($gray, 50%);
+$grayLightest: tint($gray, 90%);
+$grayDark: shade($gray, 20%);
+$grayDarker: shade($gray, 50%);
+$grayDarkest: shade($gray, 80%);
+
+// ------------------------------------------------------------------ 
+//  COLORS 2 THINGS
+// ------------------------------------------------------------------ 
+
+$siteBackgroundColor: $white;
+
+// Text Color
+$textColor: $grayDarker;
+$textColorLight: $grayLight;
+
+// Input placeholder text color
+$placeholderText: $grayLight;
+
+// Links
+$linkColor: blue;
+$linkColorHover: red;
+$linkColorActive: red;
+$linkColorVisited: purple;
+
+// ------------------------------------------------------------------ 
+//  FONT STACKS
+// ------------------------------------------------------------------ 
+
+$body-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$alt-stack: "Arial Rounded MT Bold", Helvetica, Arial, sans-serif;
+$legal-stack: Georgia, "Times New Roman", Times, serif;
+$baseFontSize: 13px;
+$baseLineHeight: 18px;
+
+//  Headings
+// ------------------------------------------------------------------ 
+$headingsFontFamily: $body-stack;
+$headingsFontWeight: normal; // instead of browser default, bold
+$headingsColor: ''; // empty to use BS default, $textColor
+
+$subHeadingsFontFamily: $body-stack;
+$subHeadingsFontWeight: normal; // instead of browser default, bold
+$subHeadingsColor: ''; // empty to use BS default, $textColor
+
+//  Navigation
+// ------------------------------------------------------------------ 
+$navFontFamily: $body-stack;
+$navFontWeight: normal; // instead of browser default, bold
+
+//  Body
+// ------------------------------------------------------------------ 
+$baseFontFamily: $body-stack;
+$altFontFamily: $alt-stack;
+
+///  Special Case
+// ------------------------------------------------------------------ 
+$legalFontFamily: $legal-stack;
