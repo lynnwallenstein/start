@@ -24,3 +24,4 @@
   Software/Tools:
     Sublime Text : http://www.sublimetext.com/
     SASS : http://sass-lang.com/
+    CodeKit: http://incident57.com/codekit/
