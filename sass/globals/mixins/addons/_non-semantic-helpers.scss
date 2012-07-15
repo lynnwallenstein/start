@@ -1,5 +1,9 @@
+//************************************************************************
+// NON SEMANTIC HELPERS
+//************************************************************************
+
 // For image replacement
-@mixin ir { 
+.ir {
   background-color: transparent;
   border:0;
   font: 0/0 a;
@@ -8,13 +12,13 @@
 }
 
 // Hide for both screenreaders and browsers: h5bp.com/m
-@mixin hidden {
+.hidden {
   display: none !important;
   visibility: hidden;
 }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/n  & h5bp.com/o */
-@mixin visuallyhidden {
+.visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -37,7 +41,7 @@
 }
 
 // Hide visually and from screenreaders, but maintain layout
-@mixin invisible {
+.invisible {
   visibility: hidden;
 }
 
@@ -45,7 +49,7 @@
 // --------
 // For clearing floats like a boss h5bp.com/q
 
-@mixin clearfix() {
+.clearfix {
   *zoom: 1;
   &:before,
   &:after {

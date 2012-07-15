@@ -2,20 +2,27 @@
 // VARIABLES
 // *****************************************************************************
 
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 //  PATHS
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 
 $root-assets: "/";
 $font-path: $root-assets+"/fonts";
 $image-path: $root-assets+"/img";
 
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 //  COLORS
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 
 $black: #000;
 $white: #fff;
+$red: red;
+$orange: orange;
+$yellow: yellow;
+$green: green;
+$blue: blue;
+$purple: purple;
+$brown: brown;
 
 // The Grays
 // -------------------------------------------------------------------
@@ -28,9 +35,13 @@ $grayDark: shade($gray, 20%);
 $grayDarker: shade($gray, 50%);
 $grayDarkest: shade($gray, 80%);
 
-// ------------------------------------------------------------------ 
+
+// ------------------------------------------------------------------
 //  COLORS 2 THINGS
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
+
+$app-color-primary: $blue; // The main highlight color of the app
+$app-color-secondary: $red; // Secondary color used
 
 $siteBackgroundColor: $white;
 
@@ -47,18 +58,18 @@ $linkColorHover: red;
 $linkColorActive: red;
 $linkColorVisited: purple;
 
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 //  FONT STACKS
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 
-$body-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-stack: "rooney-web", sans-serif;
 $alt-stack: "Arial Rounded MT Bold", Helvetica, Arial, sans-serif;
 $legal-stack: Georgia, "Times New Roman", Times, serif;
-$baseFontSize: 13px;
-$baseLineHeight: 18px;
+$baseFontSize: 16px;
+$baseLineHeight: 24px;
 
 //  Headings
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 $headingsFontFamily: $body-stack;
 $headingsFontWeight: normal; // instead of browser default, bold
 $headingsColor: ''; // empty to use BS default, $textColor
@@ -68,15 +79,31 @@ $subHeadingsFontWeight: normal; // instead of browser default, bold
 $subHeadingsColor: ''; // empty to use BS default, $textColor
 
 //  Navigation
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 $navFontFamily: $body-stack;
 $navFontWeight: normal; // instead of browser default, bold
 
 //  Body
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 $baseFontFamily: $body-stack;
 $altFontFamily: $alt-stack;
 
 ///  Special Case
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 $legalFontFamily: $legal-stack;
+
+
+
+// ------------------------------------------------------------------
+//  TypeKit - Use via @extend
+// ------------------------------------------------------------------
+
+.magistral-web {
+  font-family: "magistral-web";
+}
+.rooney-web {
+  font-family: "rooney-web", sans-serif;
+}
+.meta-web {
+  font-family: "ff-meta-web-pro",sans-serif;
+}

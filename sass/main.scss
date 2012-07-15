@@ -3,39 +3,82 @@
 //  By: Lynn Wallenstein
 // *****************************************************************************
 
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 //  Includes
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 
 @import "globals/mixins/mixins";
 @import "globals/variables";
 @import "plugins/marcotte-grid";
-@import "plugins/normalize"; 
+@import "plugins/normalize";
 @import "plugins/boilerplate";
 
 // Sections of Page
-@import "sections/header"; 
-@import "sections/footer"; 
+@import "sections/header";
+@import "sections/footer";
 
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 //  Primary Styles
 //  - Keep this limited. Styles should live in proper section. modules files.
 //  - Layout classes should begin with .layout-
 //  - Modules/Plugins should never be IDs
 //  - States should follow the "is-visible" convention
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 
 html {
   body {
     background: $siteBackgroundColor;
+    color: $textColor;
+    font-family: $body-stack;
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    p {
+      font-size: $baseFontSize;
+      line-height: $baseLineHeight;
+    }
+    h1, h2, h3 {
+    	color: $headingsColor;
+    	font-family: $headingsFontFamily;
+    	font-weight: $headingsFontWeight;
+    } // h1, h2, h3
+    h4, h5, h6 {
+    	color: $subHeadingsColor;
+    	font-family: $subHeadingsFontFamily;
+    	font-weight: $subHeadingsFontWeight;
+    } // h4, h5, h6
+    a, a:link {
+    	color: $linkColor;
+    } // a, a:link;
+    a:hover {
+    	color: $linkColorHover;
+    } // a:hover;
+    a:active {
+    	color: $linkColorActive;
+    } // a:active;
+    a:visited {
+    	color: $linkColorVisited;
+    } //  a:visited
+    nav {
+      font-family: $navFontFamily;
+      font-weight: $navFontWeight;
+    }
+   	header#page-header, div#main, footer#page-footer {
+    	@include grid_container;
+    } // 	header#page-header, div#main, footer#page-footer
     div#main {
+    	section#content {
+
+    	} // section#content
     } // div#main
   } // body
 } // html
 
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 //  Primary Styles
-// ------------------------------------------------------------------ 
+// ------------------------------------------------------------------
 
 @import "components/responsive";
 @import "globals/print";

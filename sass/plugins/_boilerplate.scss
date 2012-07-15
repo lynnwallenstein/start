@@ -18,31 +18,21 @@
 //
 
 body {
-  font-size: 1em;
-  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+  &.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
 }
 
 body, button, input, select, textarea {
   color: #222;
 }
 
-
-//
-// Remove text-shadow in selection highlight: h5bp.com/i
-// These selection declarations have to be separate
-// Also: hot pink! (or customize the background color to match your design)
-//
-
-::-moz-selection { background: #b3d4fc; text-shadow: none; }
-::selection { background: #b3d4fc; text-shadow: none; }
-
-//=============================================================================
-//   Links
-//  ========================================================================== */
-
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
 
 // =============================================================================
 //   Typography
