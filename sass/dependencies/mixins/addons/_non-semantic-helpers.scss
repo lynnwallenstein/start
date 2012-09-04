@@ -4,11 +4,17 @@
 
 // For image replacement
 .ir {
-  background-color: transparent;
-  border:0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+    &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
 }
 
 // Hide for both screenreaders and browsers: h5bp.com/m
@@ -50,13 +56,20 @@
 // For clearing floats like a boss h5bp.com/q
 
 .clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
+  &:before, &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
   }
   &:after {
     clear: both;
   }
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.cf {
+  *zoom: 1;
 }

@@ -33,46 +33,57 @@ body, button, input, select, textarea {
   color: #222;
 }
 
+// HTML5 Boilerplate
+// -------------------------------------------------------
 
-// =============================================================================
-//   Typography
-//  ========================================================================== */
+//
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection declarations have to be separate.
+// Customize the background color to match your design.
+///
 
-
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
-ins { background: #ff9; color: #000; text-decoration: none; }
-
-mark { font-style: italic; font-weight: bold; }
-
-small { font-size: 85%; }
-
-ul,ol { padding: 0 0 0 40px;}
-
-nav ul, nav ol {  margin: 0; padding: 0; }
-
-img { vertical-align: middle; }
-
-fieldset { border: 0; margin: 0; padding: 0; }
-
-legend { padding: 0; }
-
-label { cursor: pointer; }
-
-textarea { resize: vertical; }
-
-// Colors for form validity
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-
-table {
-  td {
-    vertical-align: top;
-  }
+::-moz-selection {
+    background: $app-color;
+    color: $white;
+    text-shadow: none;
 }
 
-// =============================================================================
-//  Chrome Frame Prompt
-//  ========================================================================== */
+::selection {
+    background: $app-color;
+    color: $white;
+    text-shadow: none;
+}
 
-.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+hr {
+  margin: $baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid $grayLightest;
+  border-bottom: 1px solid $white;
+}
+
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+img {
+    vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Allow only vertical resizing of textareas
+textarea {
+    resize: vertical;
+}
+
+
+// Chrome Frame prompt
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
