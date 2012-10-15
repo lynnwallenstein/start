@@ -43,13 +43,13 @@ body, button, input, select, textarea {
 ///
 
 ::-moz-selection {
-    background: $app-color;
+    background: $linkColor;
     color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: $app-color;
+    background: $linkColor;
     color: $white;
     text-shadow: none;
 }

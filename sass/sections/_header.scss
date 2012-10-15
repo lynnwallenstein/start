@@ -5,13 +5,7 @@
 html {
   body {
     header#page-header {
-      background: $grayLighter;
-      h1 {
-       @extend .magistral-web;
-       margin: 0;
-       color: $black;
-       padding: 16px;
-      } //h1
+
     } //header#page-header
   } // body
 } // html

@@ -7,11 +7,12 @@
 //  Includes
 // ------------------------------------------------------------------
 
+
 @import "dependencies/mixins/mixins";
 @import "dependencies/variables";
-@import "dependencies/marcotte-grid";
-@import "dependencies/normalize";
-@import "dependencies/boilerplate";
+@import "plugins/marcotte-grid";
+@import "plugins/normalize";
+@import "plugins/boilerplate";
 
 // Sections of Page
 @import "sections/header";
