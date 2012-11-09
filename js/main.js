@@ -1,5 +1,5 @@
 /* Author: Lynn Wallenstein */
 
-$(document).ready(function() {
+jQuery(function($) {
   // Handler for .ready() called.
 });

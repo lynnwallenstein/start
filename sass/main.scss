@@ -3,20 +3,23 @@
 //  By: Lynn Wallenstein
 // *****************************************************************************
 
+// Might need ☃
+// ------------------------------------------------------------------
+@charset "UTF-8";
+
 // ------------------------------------------------------------------
 //  Includes
 // ------------------------------------------------------------------
 
-
 @import "dependencies/mixins/mixins";
 @import "dependencies/variables";
-@import "plugins/marcotte-grid";
-@import "plugins/normalize";
-@import "plugins/boilerplate";
+@import "vendor/marcotte-grid";
+@import "vendor/normalize";
+@import "vendor/boilerplate";
 
 // Sections of Page
-@import "sections/header";
-@import "sections/footer";
+@import "areas/header";
+@import "areas/footer";
 
 // ------------------------------------------------------------------
 //  Primary Styles
@@ -41,39 +44,31 @@ html {
       line-height: $baseLineHeight;
     }
     h1, h2, h3 {
-    	color: $headingsColor;
-    	font-family: $headingsFontFamily;
-    	font-weight: $headingsFontWeight;
+      color: $headingsColor;
+      font-family: $headingsFontFamily;
+      font-weight: $headingsFontWeight;
     } // h1, h2, h3
     h4, h5, h6 {
-    	color: $subHeadingsColor;
-    	font-family: $subHeadingsFontFamily;
-    	font-weight: $subHeadingsFontWeight;
+      color: $subHeadingsColor;
+      font-family: $subHeadingsFontFamily;
+      font-weight: $subHeadingsFontWeight;
     } // h4, h5, h6
     a, a:link {
-    	color: $linkColor;
+        color: $linkColor;
     } // a, a:link;
     a:hover {
-    	color: $linkColorHover;
+        color: $linkColorHover;
     } // a:hover;
     a:active {
-    	color: $linkColorActive;
+        color: $linkColorActive;
     } // a:active;
     a:visited {
-    	color: $linkColorVisited;
+        color: $linkColorVisited;
     } //  a:visited
     nav {
       font-family: $navFontFamily;
       font-weight: $navFontWeight;
     }
-   	header#page-header, div#main, footer#page-footer {
-    	@include grid_container;
-    } // 	header#page-header, div#main, footer#page-footer
-    div#main {
-    	section#content {
-
-    	} // section#content
-    } // div#main
   } // body
 } // html
 
@@ -81,5 +76,38 @@ html {
 //  Primary Styles
 // ------------------------------------------------------------------
 
-@import "components/responsive";
-@import "globals/print";
+html body {
+  header#page-header, div#main, footer#page-footer {
+    @include grid_container;
+  } //    header#page-header, div#main, footer#page-footer
+  div#main {
+  } // div#main
+} // html body
+
+// ------------------------------------------------------------------
+//  Responsive Styles
+// ------------------------------------------------------------------
+
+//    Tablet Layout: 768px.
+// ------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+//   Mobile Layout: 320px.
+// ------------------------------------------------------------------
+@media only screen and (max-width: 767px) {
+}
+
+//   Wide Mobile Layout: 480px.
+// ------------------------------------------------------------------
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+//  Retina media query.
+// ------------------------------------------------------------------
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+}
+
+@import "dependencies/print";

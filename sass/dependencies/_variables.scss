@@ -54,9 +54,9 @@ $placeholderText: $grayLight;
 
 // Links
 $linkColor: blue;
-$linkColorHover: red;
-$linkColorActive: red;
-$linkColorVisited: purple;
+$linkColorHover: lighten($linkColor, 20%);
+$linkColorActive: lighten($linkColor, 30%);
+$linkColorVisited: darken($linkColor, 20%);
 
 // ------------------------------------------------------------------
 //  FONT STACKS
