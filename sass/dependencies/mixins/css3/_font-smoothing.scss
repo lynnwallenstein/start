@@ -1,9 +1,0 @@
-@mixin font-smoothing($type) {
-//  none | subpixel-antialiased | antialiased;
--moz-font-smoothing: $type;
--webkit-font-smoothing: $type;
--o-font-smoothing: $type;
--ms-font-smoothing: $type;
--khtml-font-smoothing: $type;
-font-smoothing: $type;
-}

@@ -10,7 +10,6 @@ $root-assets: "/";
 $font-path: $root-assets+"/fonts";
 $image-path: $root-assets+"/img";
 
-
 // ------------------------------------------------------------------
 //  Z-INDEX VARIABLES
 // ------------------------------------------------------------------
@@ -67,7 +66,6 @@ $glow: hsla(100,100%,100%,0.75) !default;
 
 $highlight: transparentize($yellow, .7);
 
-
 // ------------------------------------------------------------------
 //  COLORS 2 THINGS
 // ------------------------------------------------------------------
@@ -109,7 +107,6 @@ $headings-font-color: ''; // empty to use BS default, $text-color
 $subheadings-font-family: $body-stack;
 $subheadings-font-weight: normal; // instead of browser default, bold
 $subheadings-font-color: ''; // empty to use BS default, $text-color
-
 
 //  Body
 // ------------------------------------------------------------------
