@@ -16,7 +16,6 @@
 @import "vendor/keanu";
 @import "vendor/normalize";
 @import "vendor/susy";
-@import "vendor/boilerplate";
 
 // Sections of Page
 @import "areas/header";
@@ -32,8 +31,8 @@
 
 
 * {
-  @include box-sizing(border-box); // http://paulirish.com/2012/box-sizing-border-box-ftw/ ... You will thank me later.
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 
@@ -43,21 +42,17 @@ html {
     background: $site-background-color;
     color: $text-color;
     font-family: $body-stack;
-    font-size: $baseFontSize;
-    line-height: $baseLineHeight;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     margin: auto;
     padding: 0;
     text-align: left;
     &.preload * {
-      -webkit-transition: none !important;
-      -moz-transition: none !important;
-      -ms-transition: none !important;
-      -o-transition: none !important;
       transition: none !important;
     }
     p {
-      font-size: $baseFontSize;
-      line-height: $baseLineHeight;
+      font-size: $base-font-size;
+      line-height: $base-line-height;
     }
     h1, h2, h3 {
       color: $headings-font-color;
@@ -82,8 +77,6 @@ html {
         color: $link-color-visited;
     } //  a:visited
     nav {
-      font-family: $navFontFamily;
-      font-weight: $navFontWeight;
     }
   } // body
 } // html
@@ -91,11 +84,62 @@ html {
 // Chrome Frame prompt
 
 .chromeframe {
-    margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: $black;
+    margin: 0.2em 0;
     padding: 0.2em 0;
 }
+
+
+body, button, input, select, textarea {
+  color: #222;
+}
+
+// HTML5 Boilerplate
+// -------------------------------------------------------
+
+//
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection declarations have to be separate.
+// Customize the background color to match your design.
+///
+
+::-moz-selection {
+    background: $link-color;
+    color: $white;
+    text-shadow: none;
+}
+
+::selection {
+    background: $link-color;
+    color: $white;
+    text-shadow: none;
+}
+
+hr {
+  margin: $base-line-height 0;
+  border: 0;
+  border-top: 1px solid $gray-lightest;
+  border-bottom: 1px solid $white;
+}
+
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+img {
+    vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Allow only vertical resizing of textareas
+textarea {
+    resize: vertical;
+}
+
 
 // ------------------------------------------------------------------
 //  Primary Styles
@@ -103,7 +147,7 @@ html {
 
 html body {
   header#page-header, div#main, footer#page-footer {
-    @include grid_container;
+    @include container;
   } //    header#page-header, div#main, footer#page-footer
   div#main {
   } // div#main
