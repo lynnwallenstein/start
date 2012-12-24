@@ -14,10 +14,6 @@ $image-path: $root-assets+"/img";
 //  Z-INDEX VARIABLES
 // ------------------------------------------------------------------
 
-// Z-index master list
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
-
 $z-index-base:  1000 !default;
 $z-index-dropdown: ($z-index-base + 10) !default;
 $z-index-popover: ($z-index-base + 20) !default;
@@ -76,11 +72,11 @@ $app-color-secondary: $red; // Secondary color used
 $site-background-color: $white;
 
 // Text Color
-$text-color: $gray-darker;
-$text-colorLight: $gray-light;
+$text-color: #222;
+$text-color-light: $gray-light;
 
 // Input placeholder text color
-$placeholderText: $gray-light;
+$placeholder-text-color: $gray-light;
 
 // Links
 $link-color: blue;

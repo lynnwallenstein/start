@@ -1,6 +1,6 @@
-// LivingSocial  SCSS Mixins
-// Combination of Thoughtbots Bourbon, LESS Mixins (Preboot) & Less Elements
-// -----------------------------------------------------------------
+// *****************************************************************************
+// MIXINS
+// *****************************************************************************
 
 // Custom Functions
 @import "functions/modular-scale";
@@ -22,23 +22,6 @@
 // Hacks
 @import "hacks/ie";
 
-// Webkit-style focus
-// ------------------
-@mixin tab-focus() {
-  // Default
-  outline: thin dotted;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-// Center-align a block level element
-// ----------------------------------
-@mixin center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
 // Sizing shortcuts

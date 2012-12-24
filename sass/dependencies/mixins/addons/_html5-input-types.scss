@@ -27,10 +27,3 @@ $unquoted-inputs-list: ();
 }
 
 $all-text-inputs: $unquoted-inputs-list;
-
-// You must use interpolation on the variable:
-// #{$all-text-inputs}
-//************************************************************************//
-//   #{$all-text-inputs}, textarea {
-//     border: 1px solid red;
-//   }

@@ -352,99 +352,89 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 33, ../sass/main.scss */
+/* line 6, ../sass/base/_default.scss */
 * {
   background-repeat: no-repeat;
   box-sizing: border-box; }
 
-/* line 39, ../sass/main.scss */
+/* line 11, ../sass/base/_default.scss */
 html {
   text-align: center; }
-  /* line 41, ../sass/main.scss */
+  /* line 13, ../sass/base/_default.scss */
   html body {
     background: white;
-    color: shade(#a29f99, 50%);
+    color: #222222;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 20px;
     margin: auto;
     padding: 0;
     text-align: left; }
-    /* line 50, ../sass/main.scss */
+    /* line 22, ../sass/base/_default.scss */
     html body.preload * {
       transition: none !important; }
-    /* line 53, ../sass/main.scss */
+    /* line 25, ../sass/base/_default.scss */
     html body p {
       font-size: 14px;
       line-height: 20px; }
-    /* line 57, ../sass/main.scss */
+    /* line 29, ../sass/base/_default.scss */
     html body h1, html body h2, html body h3 {
       color: "";
       font-family: Avenir, Helvetica, Arial, sans-serif;
       font-weight: normal; }
-    /* line 62, ../sass/main.scss */
+    /* line 34, ../sass/base/_default.scss */
     html body h4, html body h5, html body h6 {
       color: "";
       font-family: Avenir, Helvetica, Arial, sans-serif;
       font-weight: normal; }
-    /* line 67, ../sass/main.scss */
+    /* line 39, ../sass/base/_default.scss */
     html body a, html body a:link {
       color: blue; }
-    /* line 70, ../sass/main.scss */
+    /* line 42, ../sass/base/_default.scss */
     html body a:hover {
       color: #6666ff; }
-    /* line 73, ../sass/main.scss */
+    /* line 45, ../sass/base/_default.scss */
     html body a:active {
       color: #9999ff; }
-    /* line 76, ../sass/main.scss */
+    /* line 48, ../sass/base/_default.scss */
     html body a:visited {
       color: #000099; }
+    /* line 54, ../sass/base/_default.scss */
+    html body ::-moz-selection {
+      background: blue;
+      color: white;
+      text-shadow: none; }
+    /* line 60, ../sass/base/_default.scss */
+    html body ::selection {
+      background: blue;
+      color: white;
+      text-shadow: none; }
+    /* line 66, ../sass/base/_default.scss */
+    html body hr {
+      border: 0;
+      border-bottom: 1px solid white;
+      border-top: 1px solid tint(#a29f99, 90%);
+      margin: 20px 0; }
+    /* line 74, ../sass/base/_default.scss */
+    html body img {
+      vertical-align: middle; }
+    /* line 79, ../sass/base/_default.scss */
+    html body fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0; }
+    /* line 86, ../sass/base/_default.scss */
+    html body textarea {
+      resize: vertical; }
 
-/* line 86, ../sass/main.scss */
+/* line 95, ../sass/base/_default.scss */
 .chromeframe {
   background: #ccc;
   color: black;
   margin: 0.2em 0;
   padding: 0.2em 0; }
 
-/* line 94, ../sass/main.scss */
-body, button, input, select, textarea {
-  color: #222; }
-
-/* line 107, ../sass/main.scss */
-::-moz-selection {
-  background: blue;
-  color: white;
-  text-shadow: none; }
-
-/* line 113, ../sass/main.scss */
-::selection {
-  background: blue;
-  color: white;
-  text-shadow: none; }
-
-/* line 119, ../sass/main.scss */
-hr {
-  margin: 20px 0;
-  border: 0;
-  border-top: 1px solid tint(#a29f99, 90%);
-  border-bottom: 1px solid white; }
-
-/* line 127, ../sass/main.scss */
-img {
-  vertical-align: middle; }
-
-/* line 132, ../sass/main.scss */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-
-/* line 139, ../sass/main.scss */
-textarea {
-  resize: vertical; }
-
-/* line 149, ../sass/main.scss */
+/* line 6, ../sass/areas/_page.scss */
 html body header#page-header, html body div#main, html body footer#page-footer {
   *zoom: 1;
   max-width: 59em;

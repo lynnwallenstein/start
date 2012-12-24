@@ -1,0 +1,11 @@
+// *****************************************************************************
+// PAGE STRUCTURE
+// *****************************************************************************
+
+html body {
+  header#page-header, div#main, footer#page-footer {
+    @include container;
+  } //    header#page-header, div#main, footer#page-footer
+  div#main {
+  } // div#main
+} // html body
