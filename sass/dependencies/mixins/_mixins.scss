@@ -3,9 +3,7 @@
 // -----------------------------------------------------------------
 
 // Custom Functions
-@import "functions/deprecated-webkit-gradient";
 @import "functions/modular-scale";
-@import "functions/tint-shade";
 
 // CSS3 Mixins
 @import "css3/animation";
@@ -29,7 +27,6 @@
 
 // Addons & other mixins
 @import "addons/button";
-@import "addons/font-family";
 @import "addons/html5-input-types";
 @import "addons/non-semantic-helpers";
 @import "addons/position";

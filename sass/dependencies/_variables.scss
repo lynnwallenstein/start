@@ -10,6 +10,20 @@ $root-assets: "/";
 $font-path: $root-assets+"/fonts";
 $image-path: $root-assets+"/img";
 
+
+// ------------------------------------------------------------------
+//  Z-INDEX VARIABLES
+// ------------------------------------------------------------------
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+
+$z-index-base:  1000 !default;
+$z-index-dropdown: ($z-index-base + 10) !default;
+$z-index-popover: ($z-index-base + 20) !default;
+$z-index-tooltip: ($z-index-base + 30) !default;
+
 // ------------------------------------------------------------------
 //  COLORS
 // ------------------------------------------------------------------
@@ -28,12 +42,30 @@ $brown: brown;
 // -------------------------------------------------------------------
 
 $gray: #a29f99;
-$grayLight: tint($gray, 20%);
-$grayLighter: tint($gray, 50%);
-$grayLightest: tint($gray, 90%);
-$grayDark: shade($gray, 20%);
-$grayDarker: shade($gray, 50%);
-$grayDarkest: shade($gray, 80%);
+$gray-light: tint($gray, 20%);
+$gray-lighter: tint($gray, 50%);
+$gray-lightest: tint($gray, 90%);
+$gray-dark: shade($gray, 20%);
+$gray-darker: shade($gray, 50%);
+$gray-darkest: shade($gray, 80%);
+
+// Transparent Colors
+// -------------------------------------------------------------------
+
+$transparent-white: hsla(100,100%,100%,0) !default;
+$transparent-black: hsla(0,0%,0%,0) !default;
+
+$shadow-lightest: hsla(0, 0%, 0%, 0.1) !default;
+$shadow-lighter: hsla(0, 0%, 0%, 0.25) !default;
+$shadow-light: hsla(0, 0%, 0%, 0.5) !default;
+$shadow: hsla(0, 0%, 0%, 0.75) !default;
+
+$glow-lightest: hsla(100,100%,100%,0.1) !default;
+$glow-lighter: hsla(100,100%,100%,0.25) !default;
+$glow-light: hsla(100,100%,100%,0.5) !default;
+$glow: hsla(100,100%,100%,0.75) !default;
+
+$highlight: transparentize($yellow, .7);
 
 
 // ------------------------------------------------------------------
@@ -43,67 +75,51 @@ $grayDarkest: shade($gray, 80%);
 $app-color-primary: $blue; // The main highlight color of the app
 $app-color-secondary: $red; // Secondary color used
 
-$siteBackgroundColor: $white;
+$site-background-color: $white;
 
 // Text Color
-$textColor: $grayDarker;
-$textColorLight: $grayLight;
+$text-color: $gray-darker;
+$text-colorLight: $gray-light;
 
 // Input placeholder text color
-$placeholderText: $grayLight;
+$placeholderText: $gray-light;
 
 // Links
-$linkColor: blue;
-$linkColorHover: lighten($linkColor, 20%);
-$linkColorActive: lighten($linkColor, 30%);
-$linkColorVisited: darken($linkColor, 20%);
+$link-color: blue;
+$link-color-hover: lighten($link-color, 20%);
+$link-color-active: lighten($link-color, 30%);
+$link-color-visited: darken($link-color, 20%);
 
 // ------------------------------------------------------------------
 //  FONT STACKS
 // ------------------------------------------------------------------
 
-$body-stack: "rooney-web", sans-serif;
-$alt-stack: "Arial Rounded MT Bold", Helvetica, Arial, sans-serif;
+$body-stack: Avenir, Helvetica, Arial, sans-serif;
+$alt-stack:  Helvetica, Arial, sans-serif;
 $legal-stack: Georgia, "Times New Roman", Times, serif;
-$baseFontSize: 16px;
-$baseLineHeight: 24px;
+$base-font-size: 14px;
+$base-line-height: 20px;
 
 //  Headings
 // ------------------------------------------------------------------
-$headingsFontFamily: $body-stack;
-$headingsFontWeight: normal; // instead of browser default, bold
-$headingsColor: ''; // empty to use BS default, $textColor
+$headings-font-family: $body-stack;
+$headings-font-weight: normal; // instead of browser default, bold
+$headings-font-color: ''; // empty to use BS default, $text-color
 
-$subHeadingsFontFamily: $body-stack;
-$subHeadingsFontWeight: normal; // instead of browser default, bold
-$subHeadingsColor: ''; // empty to use BS default, $textColor
+$subheadings-font-family: $body-stack;
+$subheadings-font-weight: normal; // instead of browser default, bold
+$subheadings-font-color: ''; // empty to use BS default, $text-color
 
-//  Navigation
-// ------------------------------------------------------------------
-$navFontFamily: $body-stack;
-$navFontWeight: normal; // instead of browser default, bold
 
 //  Body
 // ------------------------------------------------------------------
-$baseFontFamily: $body-stack;
-$altFontFamily: $alt-stack;
+$base-font-family: $body-stack;
+$alt-font-family: $alt-stack;
 
 ///  Special Case
 // ------------------------------------------------------------------
-$legalFontFamily: $legal-stack;
-
-
+$legal-font-family: $legal-stack;
 
 // ------------------------------------------------------------------
 //  TypeKit - Use via @extend
 // ------------------------------------------------------------------
-
-.magistral-web {
-  font-family: "magistral-web";
-}
-.rooney-web {
-  font-family: "rooney-web", sans-serif;
-}
-.meta-web {
-  font-family: "ff-meta-web-pro",sans-serif;
-}

@@ -13,8 +13,9 @@
 
 @import "dependencies/mixins/mixins";
 @import "dependencies/variables";
-@import "vendor/marcotte-grid";
+@import "vendor/keanu";
 @import "vendor/normalize";
+@import "vendor/susy";
 @import "vendor/boilerplate";
 
 // Sections of Page
@@ -29,41 +30,56 @@
 //  - States should follow the "is-visible" convention
 // ------------------------------------------------------------------
 
+
+* {
+  @include box-sizing(border-box); // http://paulirish.com/2012/box-sizing-border-box-ftw/ ... You will thank me later.
+  background-repeat: no-repeat;
+}
+
+
 html {
+  text-align: center;
   body {
-    background: $siteBackgroundColor;
-    color: $textColor;
+    background: $site-background-color;
+    color: $text-color;
     font-family: $body-stack;
     font-size: $baseFontSize;
     line-height: $baseLineHeight;
-    margin: 0;
+    margin: auto;
     padding: 0;
     text-align: left;
+    &.preload * {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -ms-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important;
+    }
     p {
       font-size: $baseFontSize;
       line-height: $baseLineHeight;
     }
     h1, h2, h3 {
-      color: $headingsColor;
-      font-family: $headingsFontFamily;
-      font-weight: $headingsFontWeight;
+      color: $headings-font-color;
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
     } // h1, h2, h3
     h4, h5, h6 {
-      color: $subHeadingsColor;
-      font-family: $subHeadingsFontFamily;
-      font-weight: $subHeadingsFontWeight;
+      color: $subheadings-font-color;
+      font-family: $subheadings-font-family;
+      font-weight: $subheadings-font-weight;
     } // h4, h5, h6
     a, a:link {
-        color: $linkColor;
+        color: $link-color;
     } // a, a:link;
     a:hover {
-        color: $linkColorHover;
+        color: $link-color-hover;
     } // a:hover;
     a:active {
-        color: $linkColorActive;
+        color: $link-color-active;
     } // a:active;
     a:visited {
-        color: $linkColorVisited;
+        color: $link-color-visited;
     } //  a:visited
     nav {
       font-family: $navFontFamily;
@@ -71,6 +87,15 @@ html {
     }
   } // body
 } // html
+
+// Chrome Frame prompt
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
 
 // ------------------------------------------------------------------
 //  Primary Styles
@@ -84,30 +109,5 @@ html body {
   } // div#main
 } // html body
 
-// ------------------------------------------------------------------
-//  Responsive Styles
-// ------------------------------------------------------------------
-
-//    Tablet Layout: 768px.
-// ------------------------------------------------------------------
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-
-//   Mobile Layout: 320px.
-// ------------------------------------------------------------------
-@media only screen and (max-width: 767px) {
-}
-
-//   Wide Mobile Layout: 480px.
-// ------------------------------------------------------------------
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-
-//  Retina media query.
-// ------------------------------------------------------------------
-@media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min-device-pixel-ratio: 2) {
-}
 
 @import "dependencies/print";

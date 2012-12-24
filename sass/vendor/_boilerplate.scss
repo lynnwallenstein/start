@@ -43,13 +43,13 @@ body, button, input, select, textarea {
 ///
 
 ::-moz-selection {
-    background: $linkColor;
+    background: $link-color;
     color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: $linkColor;
+    background: $link-color;
     color: $white;
     text-shadow: none;
 }
@@ -57,7 +57,7 @@ body, button, input, select, textarea {
 hr {
   margin: $baseLineHeight 0;
   border: 0;
-  border-top: 1px solid $grayLightest;
+  border-top: 1px solid $gray-lightest;
   border-bottom: 1px solid $white;
 }
 
