@@ -6,9 +6,9 @@
 //  PATHS
 // ------------------------------------------------------------------
 
-$root-assets: "/";
-$font-path: $root-assets+"/fonts";
-$image-path: $root-assets+"/img";
+$root-assets: "/" !default;
+$font-path: $root-assets+"/fonts" !default;
+$image-path: $root-assets+"/img" !default;
 
 // ------------------------------------------------------------------
 //  Z-INDEX VARIABLES
@@ -23,26 +23,26 @@ $z-index-tooltip: ($z-index-base + 30) !default;
 //  COLORS
 // ------------------------------------------------------------------
 
-$black: #000;
-$white: #fff;
-$red: red;
-$orange: orange;
-$yellow: yellow;
-$green: green;
-$blue: blue;
-$purple: purple;
-$brown: brown;
+$black: #000 !default;
+$white: #fff !default;
+$red: red !default;
+$orange: orange !default;
+$yellow: yellow !default;
+$green: green !default;
+$blue: blue !default;
+$purple: purple !default;
+$brown: brown !default;
 
 // The Grays
 // -------------------------------------------------------------------
 
-$gray: #a29f99;
-$gray-light: tint($gray, 20%);
-$gray-lighter: tint($gray, 50%);
-$gray-lightest: tint($gray, 90%);
-$gray-dark: shade($gray, 20%);
-$gray-darker: shade($gray, 50%);
-$gray-darkest: shade($gray, 80%);
+$gray: #a29f99 !default;
+$gray-light: lighten($gray, 20%) !default;
+$gray-lighter: lighten($gray, 50%) !default;
+$gray-lightest: lighten($gray, 90%) !default;
+$gray-dark: darken($gray, 20%) !default;
+$gray-darker: darken($gray, 50%) !default;
+$gray-darkest: darken($gray, 80%) !default;
 
 // Transparent Colors
 // -------------------------------------------------------------------
@@ -60,59 +60,61 @@ $glow-lighter: hsla(100,100%,100%,0.25) !default;
 $glow-light: hsla(100,100%,100%,0.5) !default;
 $glow: hsla(100,100%,100%,0.75) !default;
 
-$highlight: transparentize($yellow, .7);
+$highlight: transparentize($yellow, .7) !default;
 
 // ------------------------------------------------------------------
 //  COLORS 2 THINGS
 // ------------------------------------------------------------------
 
-$app-color-primary: $blue; // The main highlight color of the app
-$app-color-secondary: $red; // Secondary color used
+$app-color-primary: $blue !default; // The main highlight color of the app
+$app-color-secondary: $red !default; // Secondary color used
 
-$site-background-color: $white;
+$site-background-color: $white !default;
 
 // Text Color
-$text-color: #222;
-$text-color-light: $gray-light;
+$text-color: #222 !default;
+$text-color-light: $gray-light !default;
 
 // Input placeholder text color
-$placeholder-text-color: $gray-light;
+$placeholder-text-color: $gray-light !default;
 
 // Links
-$link-color: blue;
-$link-color-hover: lighten($link-color, 20%);
-$link-color-active: lighten($link-color, 30%);
-$link-color-visited: darken($link-color, 20%);
+$link-color: $blue !default;
+$link-color-hover: lighten($link-color, 20%) !default;
+$link-color-active: lighten($link-color, 30%) !default;
+$link-color-visited: darken($link-color, 20%) !default;
 
 // ------------------------------------------------------------------
 //  FONT STACKS
 // ------------------------------------------------------------------
 
-$body-stack: Avenir, Helvetica, Arial, sans-serif;
-$alt-stack:  Helvetica, Arial, sans-serif;
-$legal-stack: Georgia, "Times New Roman", Times, serif;
-$base-font-size: 14px;
-$base-line-height: 20px;
-
-//  Headings
-// ------------------------------------------------------------------
-$headings-font-family: $body-stack;
-$headings-font-weight: normal; // instead of browser default, bold
-$headings-font-color: ''; // empty to use BS default, $text-color
-
-$subheadings-font-family: $body-stack;
-$subheadings-font-weight: normal; // instead of browser default, bold
-$subheadings-font-color: ''; // empty to use BS default, $text-color
-
-//  Body
-// ------------------------------------------------------------------
-$base-font-family: $body-stack;
-$alt-font-family: $alt-stack;
-
-///  Special Case
-// ------------------------------------------------------------------
-$legal-font-family: $legal-stack;
-
 // ------------------------------------------------------------------
 //  TypeKit - Use via @extend
 // ------------------------------------------------------------------
+
+
+$body-stack: Avenir, Helvetica, Arial, sans-serif !default;
+$alt-stack:  Helvetica, Arial, sans-serif !default;
+$legal-stack: Georgia, "Times New Roman", Times, serif !default;
+
+$base-font-size: 14px !default;
+$base-line-height: 20px !default;
+
+//  Headings
+// ------------------------------------------------------------------
+$headings-font-family: $body-stack !default;
+$headings-font-weight: normal !default; // instead of browser default, bold
+$headings-font-color: '' !default; // empty to use BS default, $text-color
+
+$subheadings-font-family: $body-stack !default;
+$subheadings-font-weight: normal !default; // instead of browser default, bold
+$subheadings-font-color: '' !default; // empty to use BS default, $text-color
+
+//  Body
+// ------------------------------------------------------------------
+$base-font-family: $body-stack !default;
+$alt-font-family: $alt-stack !default;
+
+///  Special Case
+// ------------------------------------------------------------------
+$legal-font-family: $legal-stack !default;

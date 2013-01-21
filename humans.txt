@@ -2,10 +2,8 @@
 /* humanstxt.org */
 
 /* TEAM */
-  Lynn Wallenstein : Founding Partner
-  ApicalLabs
-  http://www.apicallabs.com
-  Personal Site: http://www.lynn.io
+  Lynn Wallenstein
+  WWW: http://www.lynn.io
   Twitter: @LynnWallenstein
   Location: Washington, DC USA
 
@@ -19,6 +17,7 @@
     Modernizr : http://www.modernizr.com/
     jQuery : http://jquery.com/
     HTML5 Boilerplate : http://html5boilerplate.com/
+    Prefixfree : http://leaverou.github.com/prefixfree/
 
   Software/Tools:
     Sublime Text : http://www.sublimetext.com/

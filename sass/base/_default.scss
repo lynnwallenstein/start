@@ -2,7 +2,6 @@
 // DEFAULT/BOILERPLATE
 // *****************************************************************************
 
-
 * {
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -52,13 +51,13 @@ html {
     }
 
     ::-moz-selection {
-        background: $link-color;
+        background-color: $link-color;
         color: $white;
         text-shadow: none;
     }
 
     ::selection {
-        background: $link-color;
+        background-color: $link-color;
         color: $white;
         text-shadow: none;
     }
@@ -93,7 +92,7 @@ html {
 // Chrome Frame prompt
 
 .chromeframe {
-    background: #ccc;
+    background-color: #ccc;
     color: $black;
     margin: 0.2em 0;
     padding: 0.2em 0;
