@@ -1,4 +1,4 @@
-# Read about how to use .gitignore: http://h5bp.com/ae
+Read about how to use .gitignore: http://h5bp.com/ae
 
 # Numerous always-ignore extensions
 *.diff
@@ -50,3 +50,4 @@ publish
 # build script local files
 build/buildinfo.properties
 build/config/buildinfo.properties
+vendor/assets/components

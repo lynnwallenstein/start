@@ -14,8 +14,8 @@
 @import "dependencies/mixins/mixins";
 @import "dependencies/variables";
 @import "vendor/keanu";
-@import "vendor/normalize";
-@import "vendor/susy";
+@import "../vendor/assets/components/normalize-css/normalize.css";
+@import "../vendor/assets/components/susy/sass/susy.scss";
 
 // Default
 // ------------------------------------------------------------------

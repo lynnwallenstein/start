@@ -1,0 +1,11 @@
+{
+  "name": "start",
+  "dependencies": {
+
+    "normalize-css": "latest",
+    "jquery": "latest",
+    "modernizr": "latest",
+    "prefix-free": "latest",
+    "susy": "latest"
+  }
+}
