@@ -11,10 +11,10 @@
 
 /* line 10, ../sass/base/_default.scss */
 html {
+  background-color: white;
   text-align: center; }
-  /* line 12, ../sass/base/_default.scss */
+  /* line 13, ../sass/base/_default.scss */
   html body {
-    background-color: white;
     color: #222222;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     font-size: 14px;
