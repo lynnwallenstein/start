@@ -11,11 +11,13 @@
 //  Includes
 // ------------------------------------------------------------------
 
+// Vendor
+// ------------------------------------------------------------------
 @import "dependencies/mixins/mixins";
 @import "dependencies/variables";
-@import "vendor/keanu";
+@import "../vendor/assets/components/keanu/keanu";
 @import "../vendor/assets/components/normalize-css/normalize.css";
-@import "../vendor/assets/components/susy/sass/susy.scss";
+@import "../vendor/assets/components/susy/sass/susy";
 
 // Default
 // ------------------------------------------------------------------
