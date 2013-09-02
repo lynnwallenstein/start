@@ -1,19 +1,17 @@
-// *****************************************************************************
-//  MAIN STYLES
-//  By: Lynn Wallenstein
-// *****************************************************************************
+// ------------------------------------------------------------------
+//  Main.css
+//  By: Lynn Wallenstein - http://www.lynn.io
+// ------------------------------------------------------------------
 
 // Might need ☃
 // ------------------------------------------------------------------
 @charset "UTF-8";
 
-// ------------------------------------------------------------------
-//  Includes
-// ------------------------------------------------------------------
-
 // Vendor
 // ------------------------------------------------------------------
-@import "dependencies/mixins/mixins";
+
+@import "dependencies/extends/non_semantic_helpers";
+@import "dependencies/extends/shortcuts";
 @import "dependencies/variables";
 @import "../vendor/assets/components/keanu/keanu";
 @import "../vendor/assets/components/normalize-css/normalize.css";
@@ -21,14 +19,17 @@
 
 // Default
 // ------------------------------------------------------------------
+
 @import "base/default";
 
 // Sections of Page
 // ------------------------------------------------------------------
-@import "areas/header";
+
+@import "areas/page_footer";
+@import "areas/page_header";
 @import "areas/page";
-@import "areas/footer";
 
 // Print CSS
 // ------------------------------------------------------------------
+
 @import "dependencies/print";

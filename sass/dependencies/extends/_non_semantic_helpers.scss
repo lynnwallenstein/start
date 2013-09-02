@@ -1,6 +1,6 @@
-//************************************************************************
-// NON SEMANTIC HELPERS VIA EXTEND
-//************************************************************************
+// ------------------------------------------------------------------
+// Non-Sementic Helpers
+// ------------------------------------------------------------------
 
 // For image replacement
 %ir {
@@ -10,12 +10,14 @@
   overflow: hidden;
   /* IE 6/7 fallback */
   *text-indent: -9999px;
+
   &:before {
     content: "";
     display: block;
     width: 0;
     height: 150%;
   }
+
 } // .ir
 
 // Hide for both screenreaders and browsers: h5bp.com/m
@@ -34,9 +36,12 @@
   padding: 0;
   position: absolute;
   width: 1px;
+
   // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
   &.focusable {
-    &:active, &:focus {
+
+    &:active,
+    &:focus {
        clip: auto;
        height: auto;
        margin: 0;
@@ -44,10 +49,13 @@
        position: static;
        width: auto;
     }
-  }
-}
+
+  }  // &.focusable
+
+} // %visually-hidden
 
 // Hide visually and from screenreaders, but maintain layout
+
 %invisible {
   visibility: hidden;
 }
@@ -57,21 +65,24 @@
 // For clearing floats like a boss h5bp.com/q
 
 %clearfix {
+
   &:before, &:after {
     content: " "; /* 1 */
     display: table; /* 2 */
   }
+
   &:after {
     clear: both;
   }
-}
+
+} // %clearfix
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-%cf {
+%clearfix-oldie {
   *zoom: 1;
 }
 

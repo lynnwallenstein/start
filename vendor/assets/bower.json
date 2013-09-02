@@ -1,7 +1,6 @@
 {
   "name": "start",
   "dependencies": {
-
     "normalize-css": "latest",
     "jquery": "latest",
     "modernizr": "latest",
