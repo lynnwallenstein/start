@@ -9,13 +9,13 @@
 
 html {
   background-color: $site-background-color;
+  color: $text-color;
+  font-family: $body-stack;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   text-align: center;
 
   body {
-    color: $text-color;
-    font-family: $body-stack;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
     margin: auto;
     padding: 0;
     text-align: left;
@@ -104,12 +104,3 @@ html {
   } // body
 
 } // html
-
-// Chrome Frame prompt
-
-.chromeframe {
-    background-color: #ccc;
-    color: $black;
-    margin: 0.2em 0;
-    padding: 0.2em 0;
-}
