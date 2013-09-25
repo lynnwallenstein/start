@@ -1,26 +1,6 @@
 // ------------------------------------------------------------------
-//  Variables
-// ------------------------------------------------------------------
-
-//  Paths
-// ------------------------------------------------------------------
-
-$root-assets: "/" !default;
-$font-path: $root-assets+"/fonts" !default;
-$image-path: $root-assets+"/img" !default;
-
-
-//  z-index
-// ------------------------------------------------------------------
-
-$z-index-base:  1000 !default;
-$z-index-dropdown: ($z-index-base + 10) !default;
-$z-index-popover: ($z-index-base + 20) !default;
-$z-index-tooltip: ($z-index-base + 30) !default;
-
-
 //  Colors
-// ------------------------------------------------------------------
+// -------------------------------------------------------------------
 
 $black: #000 !default;
 $white: #fff !default;
@@ -83,35 +63,3 @@ $link-color: $blue !default;
 $link-color-hover: lighten($link-color, 20%) !default;
 $link-color-active: lighten($link-color, 30%) !default;
 $link-color-visited: darken($link-color, 20%) !default;
-
-
-//  FONT STACKS
-// ------------------------------------------------------------------
-
-//  TypeKit - Use via @extend
-
-$body-stack: Avenir, Helvetica, Arial, sans-serif !default;
-$alt-stack:  Helvetica, Arial, sans-serif !default;
-$legal-stack: Georgia, "Times New Roman", Times, serif !default;
-
-$base-font-size: 14px !default;
-$base-line-height: 20px !default;
-
-//  Headings
-
-$headings-font-family: $body-stack !default;
-$headings-font-weight: normal !default; // instead of browser default, bold
-$headings-font-color: '' !default; // empty to use BS default, $text-color
-
-$subheadings-font-family: $body-stack !default;
-$subheadings-font-weight: normal !default; // instead of browser default, bold
-$subheadings-font-color: '' !default; // empty to use BS default, $text-color
-
-//  Body
-
-$base-font-family: $body-stack !default;
-$alt-font-family: $alt-stack !default;
-
-///  Special Case
-
-$legal-font-family: $legal-stack !default;

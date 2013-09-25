@@ -1,0 +1,8 @@
+// ------------------------------------------------------------------
+//  z-index
+// ------------------------------------------------------------------
+
+$z-index-base:  1000 !default;
+$z-index-dropdown: ($z-index-base + 10) !default;
+$z-index-popover: ($z-index-base + 20) !default;
+$z-index-tooltip: ($z-index-base + 30) !default;

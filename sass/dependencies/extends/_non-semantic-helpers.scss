@@ -1,24 +1,25 @@
 // ------------------------------------------------------------------
-// Non-Sementic Helpers
+//  Non Semantic Helpers via @extend ... silently :shhh:
 // ------------------------------------------------------------------
 
 // For image replacement
-%ir {
+%image-replacement {
   background-color: transparent;
-  border: 0;
   color: transparent;
+  border: 0;
   overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px;
+  text-indent: 100%;
+  text-shadow: none;
+  white-space: nowrap;
 
   &:before {
     content: "";
     display: block;
+    height: 100%;
     width: 0;
-    height: 150%;
   }
 
-} // .ir
+} // %image-replacement
 
 // Hide for both screenreaders and browsers: h5bp.com/m
 %hidden {
@@ -36,8 +37,8 @@
   padding: 0;
   position: absolute;
   width: 1px;
-
   // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+
   &.focusable {
 
     &:active,
@@ -48,14 +49,13 @@
        overflow: visible;
        position: static;
        width: auto;
-    }
+    } // &.a
 
-  }  // &.focusable
+  } // &.focusable
 
 } // %visually-hidden
 
 // Hide visually and from screenreaders, but maintain layout
-
 %invisible {
   visibility: hidden;
 }
@@ -66,9 +66,10 @@
 
 %clearfix {
 
-  &:before, &:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
   }
 
   &:after {
@@ -76,41 +77,3 @@
   }
 
 } // %clearfix
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-%clearfix-oldie {
-  *zoom: 1;
-}
-
-// Webkit-style focus
-// ------------------------------------------------------------------
-%tab-focus {
-  // Default
-  outline: thin dotted;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-
-%inline-block {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: baseline;
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-}
-
-// Center-align a block level element
-// ----------------------------------
-%center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}

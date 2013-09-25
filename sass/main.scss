@@ -9,13 +9,18 @@
 
 // Vendor
 // ------------------------------------------------------------------
-
-@import "dependencies/extends/non_semantic_helpers";
-@import "dependencies/extends/shortcuts";
-@import "dependencies/variables";
 @import "../vendor/assets/components/keanu/keanu";
 @import "../vendor/assets/components/normalize-css/normalize.css";
-@import "../vendor/assets/components/susy/sass/susy";
+
+// Dependencies
+// ------------------------------------------------------------------
+@import "dependencies/extends/non-semantic-helpers";
+@import "dependencies/extends/shortcuts";
+@import "dependencies/variables/colors";
+@import "dependencies/variables/paths";
+@import "dependencies/variables/sizes";
+@import "dependencies/variables/typography";
+@import "dependencies/variables/z-index";
 
 // Default
 // ------------------------------------------------------------------
@@ -25,8 +30,8 @@
 // Sections of Page
 // ------------------------------------------------------------------
 
-@import "areas/page_footer";
-@import "areas/page_header";
+@import "areas/page-footer";
+@import "areas/page-header";
 @import "areas/page";
 
 // Print CSS

@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Defaults
+//  Defaults
 // ------------------------------------------------------------------
 
 * {
@@ -69,15 +69,15 @@ nav {
 }
 
 ::-moz-selection {
-    background-color: $link-color;
-    color: $white;
-    text-shadow: none;
+  background-color: $link-color;
+  color: $white;
+  text-shadow: none;
 }
 
 ::selection {
-    background-color: $link-color;
-    color: $white;
-    text-shadow: none;
+  background-color: $link-color;
+  color: $white;
+  text-shadow: none;
 }
 
 hr {
@@ -92,19 +92,19 @@ hr {
 
 // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 // Remove default fieldset styles.
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // Allow only vertical resizing of textareas
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* ==========================================================================
@@ -112,8 +112,8 @@ textarea {
    ========================================================================== */
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background-color: #ccc;
+  color: $black;
+  padding: 0.2em 0;
 }
