@@ -9,7 +9,7 @@
 
 // Vendor
 // ------------------------------------------------------------------
-@import "../vendor/assets/components/keanu/keanu";
+@import "../vendor/assets/components/keanu/keanu.css";
 @import "../vendor/assets/components/normalize-css/normalize.css";
 
 // Dependencies
@@ -30,9 +30,9 @@
 // Sections of Page
 // ------------------------------------------------------------------
 
+@import "areas/page";
 @import "areas/page-footer";
 @import "areas/page-header";
-@import "areas/page";
 
 // Print CSS
 // ------------------------------------------------------------------

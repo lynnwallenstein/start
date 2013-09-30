@@ -4,7 +4,6 @@
     "normalize-css": "latest",
     "jquery": "latest",
     "modernizr": "latest",
-    "prefix-free": "latest",
     "keanu": "https://github.com/meticulous/keanu.git"
   }
 }
